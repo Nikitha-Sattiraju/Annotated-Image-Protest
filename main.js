@@ -1,19 +1,19 @@
-$("body").on("click", ".dot", function (e) {
+$("body").on("click", ".square", function (e) {
 	// on click add an active class to the dot that was clicked
 	e.preventDefault();
 
-	const $this_dot = $(this);
+	const $this_square = $(this);
 
-	$this_dot.addClass("active");
+	$this_square.addClass("active");
 });
 
-$("body").on("click", ".dot .close", function (e) {
+$("body").on("click", ".square .close", function (e) {
 	// on click add an active class to the dot that was clicked
 	e.preventDefault();
 	e.stopPropagation();
 
 	const $this_close = $(this);
-	const $this_dot = $this_close.closest(".dot");
+	const $this_square = $this_close.closest(".square");
 
-	$this_dot.removeClass("active");
+	$this_square.removeClass("active");
 });
